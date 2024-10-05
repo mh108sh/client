@@ -1,0 +1,4488 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      musicTrack = "music_track1";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         name = "關西路 (24)";
+         descLines = "2";
+         desc0 = "關西路 (24)";
+   };
+   new MissionArea(MissionArea) {
+      Area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/sky_day.dml";
+      starList = "~/data/skies/stars.dat";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "200";
+      fogDistance = "250";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogStorm1 = "0";
+      fogStorm2 = "1";
+      fogStorm3 = "0";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "150 170 250";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "0.000000 0.000000 0.000000 1.000000";
+      fogVolumeColor2 = "0.000000 0.000000 0.000000 1.000000";
+      fogVolumeColor3 = "0.000000 0.000000 0.000000 1.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+      renderStars = "1";
+      fixedFog = "0";
+         locked = "true";
+   };
+   new Sun(Sun) {
+      azimuth = "45";
+      elevation = "35";
+      color = "1.000000 1.000000 1.000000 1.000000";
+      ambient = "0.400000 0.400000 0.400000 1.000000";
+      position = "-251.064 -152.42 312.416";
+      showflare = "1";
+         rotation = "1 0 0 0";
+         direction = "0.635001 0.635001 -0.439941";
+         locked = "true";
+         scale = "1 1 1";
+   };
+   new fxSunLight(fxSunLight) {
+      position = "411.871 214.142 215.285";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "0";
+      SunElevation = "30";
+      LockToRealSun = "1";
+      FlareTP = "1";
+      Colour = "1.000000 1.000000 1.000000 1.000000";
+      Brightness = "1";
+      FlareSize = "0.5";
+      FadeTime = "0.1";
+      BlendMode = "0";
+      AnimColour = "0";
+      AnimBrightness = "0";
+      AnimRotation = "0";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "0.000000 0.000000 0.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "0";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "5";
+      RotationTime = "5";
+      SizeTime = "5";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+   };
+   new oTerrainBlock(Terrain) {
+      position = "-256 -256 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      x = "-256";
+      y = "-256";
+      Z = "0";
+      repeatTiles = "0";
+      collisionOnTiles = "1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./demomap24.ter";
+      squareSize = "2";
+      bumpScale = "1";
+      bumpOffset = "0.01";
+      zeroBumpScale = "8";
+      oldTerrain = "0";
+      terrFile = "./demomap24";
+      visbleW = "128";
+      visbleH = "128";
+         showBlocking = "0";
+         enbleLightmap = "1";
+         locked = "true";
+         enableTgelight = "1";
+   };
+   new WaterBlock() {
+      position = "-1016 -1016 -85.4";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 200";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/water";
+      ShoreTexture = "~/data/water/wateredge";
+      envMapOverTexture = "~/data/skies/env";
+      specularMaskTex = "~/data/water/specmask";
+      liquidType = "StagnantWater";
+      density = "1";
+      viscosity = "15";
+      waveMagnitude = "0.3";
+      surfaceOpacity = "1";
+      envMapIntensity = "1";
+      TessSurface = "100";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      BumpLevel = "0.07";
+      FlowAngle = "220";
+      FlowRate = "0.2";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "1";
+      ShoreDepth = "8";
+      DepthGradient = "2";
+      MinAlpha = "0.1";
+      MaxAlpha = "0.5";
+      removeWetEdges = "0";
+      specularColor = "255.000000 255.000000 255.000000 1.000000";
+      specularPower = "50";
+         params0 = "0.32 -0.67 0.066 0.5";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         extent = "100 100 10";
+         floodFill = "1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         Reflection = "1";
+         textureSize = "32 32";
+         params2 = "0.39 0.39 0.2 0.133";
+         params3 = "1.21 -0.61 0.13 -0.33";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "0 0 118.6";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "100";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+   };
+   new Terraformer(Terraformer) {
+   };
+   new TSStatic() {
+      position = "-83 178.5 116.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-54.5 207.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-35 160.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-59.5 131.5 116.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-13 131.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-80 105 116.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-100.5 85.5 116.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-106.5 56 116.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-106 24 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-111.5 -12.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-100 -45.5 116.3";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-73.5 -74 116.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-35 -86 116.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-2 -86.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "31 -70 116.3";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "55.5 -44.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "71 -16 116.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "102 -17.5 116.5";
+      rotation = "0 0 1 0.0395647";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "110.5 -51.5 115.9";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "137 -71 116.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "173.5 -76 116.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "16 127.5 116.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "32 162 116.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "49 195.5 115.9";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "87.5 204 116.3";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "120 209.5 116.1";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "150 202.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "182.5 167 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "183.5 131 116.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "185 94 116.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "152 12 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "171 43 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "161 -25 116.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "200 -28 116.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "117 48.5 116.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "81 50 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "56 77.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "46 105.5 116.5";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "53 137 116.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "72.5 167.5 116.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "96 181.5 116.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "131.5 175.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "150.5 159 116.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "159.5 112.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "149 86.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "39.5 32.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "38.5 -13.5 116.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "25.5 -37 116.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "6.5 -56.5 116.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-18 -57.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "-51.5 -54 116.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-79 -35.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-90.5 -7.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-82.5 15.5 115.953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "-77 47 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-72 70.5 116.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "-49 87 116.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "31.5 62 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001c.dts";
+   };
+   new TSStatic() {
+      position = "8 94.5 116.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new StaticShape() {
+      position = "-38 82.5 120.305";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-24 92.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-40 59.5 120.078";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-21 58 120.188";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-37.5 43 120.031";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-21.5 41 119.773";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-57 40.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-57 58.5 120.234";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-3.5 58.5 120.242";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-3.5 41 120.125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "1 77 120.469";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-17.5 76.5 120.188";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "14.5 41.5 120.344";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "13 60.5 119.914";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "34 25.5 119.648";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "33 8 119.672";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "19 24.5 120.078";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "21 9 120.422";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "1.5 24 120.344";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "1 7.5 120.055";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-21 5.5 120.781";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-22.5 23 120.594";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-38 23 120.719";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-38.5 5 120.258";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-58.5 19 120.687";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-57 1.5 120.578";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-75 1 120.312";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-55.5 -30 120.195";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-41.5 -30.5 120.93";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-40.5 -15 120.82";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-56.5 -15 120.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-37.5 -50 120.492";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-34 -38 121.25";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-18 -38 121.344";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-2 -28.5 120.687";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "15.5 -31 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "13 -10.5 121.164";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "31 -11 120.594";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-2 -11.5 120.164";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-18.5 -12 120.328";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-17 -30.5 120.063";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-118.448 -42.6967 120";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-126.933 -51.182 120";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-136 -56 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-148 -56 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-160 -56 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-186 -92.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-174 -92.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-162 -92.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-150 -92.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-145.404 -97.0962 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-136 16.8571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-148 16.8571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-160 16.8571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-150 -19.6429 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-162 -19.6429 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-174 -19.6429 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-186 -19.6429 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-121.5 87.3571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-133.5 87.3571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-174 87.3571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-150 50.8571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-162 50.8571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-174 50.8571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-186 50.8571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-120 -38 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-120 -26 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-120 -14 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-120 -2 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-118 9.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-116 21.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-116 33.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-116 45.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-116 57.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-116 69.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-116 80 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-111.404 90.0251 120";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-102.919 98.5104 120";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-94.4337 106.996 120";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-82.302 113.128 120";
+      rotation = "0 0 -1 0.0395647";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-91.4589 108.176 120";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-72.1598 117.956 120";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-67.6598 127.956 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-71.1953 137.855 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-75.9483 148.108 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-80.5445 158.361 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-89.0298 166.846 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new TSStatic() {
+      position = "-117.05 190.815 120";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-121.646 196.118 120";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007b.dts";
+   };
+   new TSStatic() {
+      position = "-127.303 201.068 120";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007a.dts";
+   };
+   new StaticShape() {
+      position = "-119 2.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-117 16.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-124 16.8571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-198 -19.6429 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-186 87.3571 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new TSStatic() {
+      position = "-154 91.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/bigwall003a.dts";
+   };
+   new TSStatic() {
+      position = "-154 197.5 120";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c007.dts";
+   };
+   new TSStatic() {
+      position = "-164.5 197 119.1";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c009.dts";
+   };
+   new TSStatic() {
+      position = "-144 197 119.2";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c009.dts";
+   };
+   new StaticShape() {
+      position = "-174 128.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-186 128.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-133.5 128.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-121.5 128.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-111.247 123.904 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-107 114.419 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-107 102.419 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new StaticShape() {
+      position = "-198 128.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/bigwall003c.dts";
+   };
+   new TSStatic() {
+      position = "-142 129.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new TSStatic() {
+      position = "-166 129.5 120";
+      rotation = "0 0 1 0.0395647";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new StaticShape() {
+      position = "-185.5 90.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object006.dts";
+   };
+   new StaticShape() {
+      position = "-172 90.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object006.dts";
+   };
+   new StaticShape() {
+      position = "-122.25 90.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object006.dts";
+   };
+   new StaticShape() {
+      position = "-135.75 90.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object006.dts";
+   };
+   new StaticShape() {
+      position = "-110.043 113 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object006b.dts";
+   };
+   new StaticShape() {
+      position = "-172 124.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object001.dts";
+   };
+   new StaticShape() {
+      position = "-180.5 125 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008a.dts";
+   };
+   new StaticShape() {
+      position = "-193 113 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object006b.dts";
+   };
+   new StaticShape() {
+      position = "-189.414 104.621 120";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object001.dts";
+   };
+   new StaticShape() {
+      position = "-135 124.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object001.dts";
+   };
+   new StaticShape() {
+      position = "-126 125 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008a.dts";
+   };
+   new StaticShape() {
+      position = "-116.439 121.646 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object010.dts";
+   };
+   new StaticShape() {
+      position = "-189.354 122.768 120";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object010.dts";
+   };
+   new StaticShape() {
+      position = "-111.957 104.621 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object001.dts";
+   };
+   new StaticShape() {
+      position = "-183 122 121";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object002.dts";
+   };
+   new StaticShape() {
+      position = "-182.5 103 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object005.dts";
+   };
+   new StaticShape() {
+      position = "-168 119.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object005.dts";
+   };
+   new StaticShape() {
+      position = "-139.5 119.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object005.dts";
+   };
+   new StaticShape() {
+      position = "-118 103 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object005.dts";
+   };
+   new StaticShape() {
+      position = "-122 120.5 121";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object002.dts";
+   };
+   new StaticShape() {
+      position = "-179 86 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008a.dts";
+   };
+   new StaticShape() {
+      position = "-129 86 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008a.dts";
+   };
+   new TSStatic() {
+      position = "-166 96.5 120";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new TSStatic() {
+      position = "-142 96.5 120";
+      rotation = "0 0 1 180.04";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new TSStatic() {
+      position = "-173.167 131.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-187.667 131.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-180.667 131 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007b.dts";
+   };
+   new TSStatic() {
+      position = "-118.167 131.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-125.667 131 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007b.dts";
+   };
+   new TSStatic() {
+      position = "-132.667 131.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-191 153 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c006.dts";
+   };
+   new TSStatic() {
+      position = "-188.5 144 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c005.dts";
+   };
+   new TSStatic() {
+      position = "-192.5 174.5 120.487";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c004.dts";
+   };
+   new TSStatic() {
+      position = "-186.904 184.268 120.008";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c003.dts";
+   };
+   new TSStatic() {
+      position = "-112.782 180.297 120";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c001.dts";
+   };
+   new TSStatic() {
+      position = "-102.243 172.257 120";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c002.dts";
+   };
+   new TSStatic() {
+      position = "-174.768 194.318 120";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c008.dts";
+   };
+   new TSStatic() {
+      position = "-132.854 193.611 120";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c008.dts";
+   };
+   new TSStatic() {
+      position = "-180.315 199.45 120";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-185.618 194.854 120";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007b.dts";
+   };
+   new TSStatic() {
+      position = "-190.568 189.197 120";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-192.5 164 120.1";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "-100.5 107.5 120.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree001.dts";
+   };
+   new TSStatic() {
+      position = "-174 161 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object009a.dts";
+   };
+   new TSStatic() {
+      position = "-133 179.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object009a.dts";
+   };
+   new TSStatic() {
+      position = "-97 161 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object009a.dts";
+   };
+   new TSStatic() {
+      position = "-188.586 137.414 120.094";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-187.879 134.586 120.018";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-180.793 188.293 120";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object005a.dts";
+   };
+   new TSStatic() {
+      position = "-178 190.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object003c.dts";
+   };
+   new TSStatic() {
+      position = "-176.5 190 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object003b.dts";
+   };
+   new TSStatic() {
+      position = "-92.5 151.5 120.039";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-92.5 143.5 120.094";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-92.5 135.5 119.719";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-92.5 127.5 120.219";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-84 124.5 120.234";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-84 132.5 119.758";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-84.5 140 119.562";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-100.5 140 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-100.5 147.5 119.953";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-100.5 132.5 119.781";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant005.dts";
+   };
+   new TSStatic() {
+      position = "-106 145 120.023";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant006.dts";
+   };
+   new TSStatic() {
+      position = "-106 142.5 119.937";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant006.dts";
+   };
+   new TSStatic() {
+      position = "-106 139.5 119.812";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant006.dts";
+   };
+   new TSStatic() {
+      position = "-106 136.5 119.734";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant006.dts";
+   };
+   new TSStatic() {
+      position = "-106 133.5 119.703";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant006.dts";
+   };
+   new TSStatic() {
+      position = "-109 136.5 119.734";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant006.dts";
+   };
+   new TSStatic() {
+      position = "-109 139.5 119.734";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant006.dts";
+   };
+   new TSStatic() {
+      position = "-85 147.5 119.984";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant002c.dts";
+   };
+   new TSStatic() {
+      position = "-83.5 150 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/fence006b.dts";
+   };
+   new TSStatic() {
+      position = "-93.4289 117.929 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/fence006b.dts";
+   };
+   new TSStatic() {
+      position = "-105.096 129.596 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/fence006b.dts";
+   };
+   new TSStatic() {
+      position = "-73.0948 129.109 120";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/building_c002.dts";
+   };
+   new TSStatic() {
+      position = "-94 147 120.188";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/farming001.dts";
+   };
+   new TSStatic() {
+      position = "-89 129.5 119.625";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/farming001.dts";
+   };
+   new TSStatic() {
+      position = "-78.5 141 119.617";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/gold_hill005.dts";
+   };
+   new TSStatic() {
+      position = "-89.8137 118.5 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/gold_hill005.dts";
+   };
+   new TSStatic() {
+      position = "-83 152.5 120";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-85 154.5 120";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-88 157 120";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object007a.dts";
+   };
+   new TSStatic() {
+      position = "-78.5858 117.914 120";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object011a.dts";
+   };
+   new TSStatic() {
+      position = "-77.5 136.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object012a.dts";
+   };
+   new TSStatic() {
+      position = "-79.5 150 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store010c.dts";
+   };
+   new TSStatic() {
+      position = "-79.7929 155.207 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store010c.dts";
+   };
+   new TSStatic() {
+      position = "-82.5 157 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store004a.dts";
+   };
+   new TSStatic() {
+      position = "-84.5 159.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store004a.dts";
+   };
+   new TSStatic() {
+      position = "-87 159.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store004a.dts";
+   };
+   new TSStatic() {
+      position = "-132.5 189 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store011a.dts";
+   };
+   new TSStatic() {
+      position = "-176.5 90.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store007.dts";
+   };
+   new TSStatic() {
+      position = "-181 90.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store007.dts";
+   };
+   new TSStatic() {
+      position = "-130.75 90.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store007.dts";
+   };
+   new TSStatic() {
+      position = "-126.25 90.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store007.dts";
+   };
+   new TSStatic() {
+      position = "-166.5 124.5 120.016";
+      rotation = "0 0 -1 0.0395647";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store007.dts";
+   };
+   new TSStatic() {
+      position = "-140.5 124.518 120";
+      rotation = "0 0 -1 0.0395647";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/store007.dts";
+   };
+   new TSStatic() {
+      position = "-126.621 191.621 120";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object002a.dts";
+   };
+   new TSStatic() {
+      position = "-120.757 189.207 119.992";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/city_object011a.dts";
+   };
+   new TSStatic() {
+      position = "-122.5 131.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new TSStatic() {
+      position = "-128.5 131.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new TSStatic() {
+      position = "-177.5 131.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new TSStatic() {
+      position = "-183.5 131.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new TSStatic() {
+      position = "-133.5 136.5 119.93";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/gold_hill004.dts";
+   };
+   new TSStatic() {
+      position = "-118.5 136.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/gold_hill004.dts";
+   };
+   new TSStatic() {
+      position = "-190 -68.5 119.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new TSStatic() {
+      position = "-142 13 120.063";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new TSStatic() {
+      position = "-166 53.5 119.836";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new TSStatic() {
+      position = "-142 -59 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "-160 -59 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new TSStatic() {
+      position = "-160.5 -89 119.969";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "-184 -89.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new TSStatic() {
+      position = "-186.5 -47.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006.dts";
+   };
+   new TSStatic() {
+      position = "-183.5 -23.5 120.328";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new TSStatic() {
+      position = "-124 -43.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new TSStatic() {
+      position = "-152.5 -52.5 120.141";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006c.dts";
+   };
+   new TSStatic() {
+      position = "-151 -22.5 119.609";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "-122.5 -11.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006c.dts";
+   };
+   new TSStatic() {
+      position = "-132.5 14.5 119.547";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new TSStatic() {
+      position = "-164.5 14.5 119.883";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006.dts";
+   };
+   new TSStatic() {
+      position = "-168 -17 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "-185.5 12 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new TSStatic() {
+      position = "-178 47.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "-155.5 18.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new TSStatic() {
+      position = "-126.5 19 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006c.dts";
+   };
+   new TSStatic() {
+      position = "-119 48.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new TSStatic() {
+      position = "-120 79 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new TSStatic() {
+      position = "-148 48.5 120.117";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "-160 53.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new TSStatic() {
+      position = "-181.5 68.5 120.023";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006.dts";
+   };
+   new StaticShape() {
+      position = "-150.5 -90.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-170 -90.5 120";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-187 -77 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-152 -58.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-122 -19.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-122 -34.5 120";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-143.5 -53.5 120.047";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-191 -22.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-167.5 -22 120";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-150.5 -17 120.109";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-177.5 -17 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-155.5 14 120.078";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-171.5 48 120.016";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-155.5 48.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-141.5 18.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-118.5 36.5 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-118.5 59 120";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-177 53.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new StaticShape() {
+      position = "-118.5 69.5 119.914";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object008b.dts";
+   };
+   new TSStatic() {
+      position = "-128.439 -49.0607 119.891";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/white_sand012b.dts";
+   };
+   new TSStatic() {
+      position = "-188 -2 120.25";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/white_sand012.dts";
+   };
+   new TSStatic() {
+      position = "-133.5 68.5 120.016";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/white_sand012b.dts";
+   };
+   new TSStatic() {
+      position = "-135.5 -1.5 120.57";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/white_sand012c.dts";
+   };
+   new TSStatic() {
+      position = "-148.5 -75 119.898";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/white_sand012.dts";
+   };
+   new TSStatic() {
+      position = "-148 28 120.531";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/white_sand009.dts";
+   };
+   new TSStatic() {
+      position = "-149.146 27.3536 120.687";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/white_sand009.dts";
+   };
+   new TSStatic() {
+      position = "-178.5 -24.5 120.188";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/white_sand009.dts";
+   };
+   new TSStatic() {
+      position = "-177 -78.5 120.242";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/white_sand009.dts";
+   };
+   new TSStatic() {
+      position = "-187 -41 120.125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-187 -27 120.031";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-134.5 -54 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-145.5 -17.5 120.344";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-147.5 14 120.914";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-185 -8.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-120 10.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-190.5 36.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-189 40.5 120.031";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-155 52.5 119.969";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-133.5 71 120.312";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-168 47.5 120.234";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-188.5 83.5 120.031";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-183 58.5 120.07";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-123.5 85.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-125 43 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-147.5 -58.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-187 -83.5 120.266";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-149 -89.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new StaticShape() {
+      position = "-150.414 -102.914 116";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-123 -124 116";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-106.439 -133.939 116";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-84.5 -141.5 116";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-63.5 -149 116";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-42 -149 116";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-20.5 -150.5 116";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "0.5 -150.5 116";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "17.9142 -156.586 116.148";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-176 -101 116";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-175.5 -126 116";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-159.439 -151.182 116";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-136.5 -163.5 116";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-108.5 -173 116.016";
+      rotation = "0 0 1 0.0395647";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-88.001 -174.514 116.094";
+      rotation = "0 0 1 0.0395647";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-67.0027 -177.029 116";
+      rotation = "0 0 1 0.0395647";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-41.0031 -177.547 116";
+      rotation = "0 0 1 0.0395647";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "-20.5031 -177.561 116";
+      rotation = "0 0 1 0.0395647";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "0.496895 -177.576 116";
+      rotation = "0 0 1 0.0395647";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "18.4969 -177.588 116";
+      rotation = "0 0 1 0.0395647";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand005.dts";
+   };
+   new StaticShape() {
+      position = "8.5 -176.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-10.5 -176.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-31 -177 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-55.5 -178.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-78 -175 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-98.5 -173 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-123 -166 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-148.5 -157 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-168.5 -139.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-182 -115 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-162.5 -98.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-115.5 -130 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-97 -141 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-73.5 -147.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-53 -149.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-31 -151 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-10 -151.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "10.5 -154 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new TSStatic() {
+      position = "-177.5 -123.5 115.398";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-179.5 -119.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-182.5 -105 115.906";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-172 -99.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-166.5 -99.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-156 -98.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-119.5 -127 116.016";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-102 -138 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-80 -144 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-89 -142 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-65.5 -148.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-46 -151 116.141";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-39 -151 116.227";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-27.5 -151 115.922";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-171 -135 116.234";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-164.5 -147.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-153.5 -156.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-132 -165 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-139.5 -163.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-117 -169.5 116.211";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-101.5 -174 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-90.5 -173 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-73 -174 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-61 -179 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-46.5 -180.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-52.5 -179 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-23.5 -177.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-6.5 -177.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-0.5 -177.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "14 -177.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "13.5 -155.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "3.5 -153.5 115.961";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-2.5 -151.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-14.5 -151 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-169 -112.5 115.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object015.dts";
+   };
+   new TSStatic() {
+      position = "-145.5 -145.5 115";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object015b.dts";
+   };
+   new TSStatic() {
+      position = "-84 -151.5 114.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object015b.dts";
+   };
+   new TSStatic() {
+      position = "-83 -152.5 114.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object015.dts";
+   };
+   new TSStatic() {
+      position = "-35.5 -170.5 114.7";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/outside_object015b.dts";
+   };
+   new TSStatic() {
+      position = "23 -97.5 130";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006c.dts";
+   };
+   new TSStatic() {
+      position = "-2.5 -104 130.32";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new TSStatic() {
+      position = "43.5 -80 129.969";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "63 -59 124.687";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new TSStatic() {
+      position = "54 -94 130.188";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new TSStatic() {
+      position = "24 -136 130.375";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "40.5 -114.5 130.109";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006c.dts";
+   };
+   new TSStatic() {
+      position = "-27.5 -104 129.141";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006.dts";
+   };
+   new TSStatic() {
+      position = "74.5 -82 124.711";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006.dts";
+   };
+   new TSStatic() {
+      position = "-73 -95 128.781";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new TSStatic() {
+      position = "-26.5 -136.5 130.117";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006.dts";
+   };
+   new TSStatic() {
+      position = "-53 -99.5 130.422";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "-98 -122 126.156";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new TSStatic() {
+      position = "-77.5 -130 130.063";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006c.dts";
+   };
+   new TSStatic() {
+      position = "-54.5 -138 130";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new TSStatic() {
+      position = "-0.5 -138 130.164";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new TSStatic() {
+      position = "-19.5 -136.5 130.328";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new TSStatic() {
+      position = "-115 -45 120.063";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new TSStatic() {
+      position = "-65.5 -98.5 129.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new TSStatic() {
+      position = "34.0251 -83.0251 129.6";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "-64.5 -134 130";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand007.dts";
+   };
+   new StaticShape() {
+      position = "-15.5 -103.5 130";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand007.dts";
+   };
+   new StaticShape() {
+      position = "33 -124 129.937";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/stand007.dts";
+   };
+   new TSStatic() {
+      position = "-43.5 -138.5 130.18";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/gold_hill007b.dts";
+   };
+   new TSStatic() {
+      position = "-78.5 -90.5 127.148";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-33.5 -102.5 129.906";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-44 -101.5 129.633";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-33.5 -138 130.07";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-108 -119.5 124.422";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-88.5 -125.5 129.32";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-60.5 -135.5 130";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-59 -100 130.594";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "-12 -137.5 130.047";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-6.5 -138 130.227";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "-9 -103.5 130.641";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "5 -101.5 130";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "12.5 -99.5 130";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "9 -141 129.984";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "29 -129.5 130.047";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "26.5 -92 130.047";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "42.5 -106 129.812";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "43.5 -76.5 129.899";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "49 -99 130";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "67.5 -87 127.734";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new TSStatic() {
+      position = "60 -91 129.937";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "51 -71 128.203";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new TSStatic() {
+      position = "55.5 -66.5 126.148";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new StaticShape() {
+      position = "-143.5 -19.5 119.93";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "-166.5 17 120";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "-166.5 -56 119.9";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "-143 51.5 120.4";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "116.5 -145 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001c.dts";
+   };
+   new StaticShape() {
+      position = "83.9038 -112.404 125";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001b.dts";
+   };
+   new StaticShape() {
+      position = "110.5 -174 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001a.dts";
+   };
+   new StaticShape() {
+      position = "86.5 -194 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001a.dts";
+   };
+   new StaticShape() {
+      position = "66 -137 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001a.dts";
+   };
+   new StaticShape() {
+      position = "62.5 -176.5 125";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001c.dts";
+   };
+   new StaticShape() {
+      position = "87.2574 -160.893 125";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001b.dts";
+   };
+   new StaticShape() {
+      position = "47 -149 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001a.dts";
+   };
+   new StaticShape() {
+      position = "61 -110.5 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001a.dts";
+   };
+   new StaticShape() {
+      position = "93.5 -137 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill001a.dts";
+   };
+   new StaticShape() {
+      position = "121.5 -169 123.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "121.5 -152 124.883";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "66.5 -190.5 125";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "99.5 -186 125";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "114 -125 125";
+      rotation = "0 0 1 225";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "91 -105.5 125";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "57 -115.5 125";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "41.5 -148 125";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "42 -176 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light009.dts";
+   };
+   new StaticShape() {
+      position = "106.5 -119.5 125.383";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new StaticShape() {
+      position = "83 -104.5 125.172";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new StaticShape() {
+      position = "41 -136.5 125.172";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree006.dts";
+   };
+   new StaticShape() {
+      position = "57 -110 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new StaticShape() {
+      position = "44.5 -183 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree006c.dts";
+   };
+   new StaticShape() {
+      position = "67 -196.5 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree003.dts";
+   };
+   new StaticShape() {
+      position = "96 -193.5 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new StaticShape() {
+      position = "112.5 -175.5 124.875";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree003b.dts";
+   };
+   new StaticShape() {
+      position = "120 -139.5 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree006b.dts";
+   };
+   new StaticShape() {
+      position = "150 -155.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree001b.dts";
+   };
+   new StaticShape() {
+      position = "171.5 -120.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree001b.dts";
+   };
+   new StaticShape() {
+      position = "130 -113 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree001b.dts";
+   };
+   new StaticShape() {
+      position = "188.5 -96 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree001b.dts";
+   };
+   new StaticShape() {
+      position = "149.5 -85 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree001b.dts";
+   };
+   new StaticShape() {
+      position = "164.5 -179 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree001b.dts";
+   };
+   new StaticShape() {
+      position = "120 -187 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree001b.dts";
+   };
+   new StaticShape() {
+      position = "100.5 -95.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree001b.dts";
+   };
+   new StaticShape() {
+      position = "106 -67 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree001b.dts";
+   };
+   new StaticShape() {
+      position = "145.5 -150.5 120.023";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree010a.dts";
+   };
+   new StaticShape() {
+      position = "137 -134 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree010a.dts";
+   };
+   new StaticShape() {
+      position = "168 -115.5 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree010a.dts";
+   };
+   new StaticShape() {
+      position = "167.5 -153 120.508";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree010a.dts";
+   };
+   new StaticShape() {
+      position = "139.5 -103 120.117";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree010a.dts";
+   };
+   new StaticShape() {
+      position = "112 -92.5 117.883";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree010a.dts";
+   };
+   new StaticShape() {
+      position = "181.5 -93 120.461";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree010a.dts";
+   };
+   new StaticShape() {
+      position = "154.5 -183 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree010a.dts";
+   };
+   new StaticShape() {
+      position = "126 -178.5 120";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/tree010b.dts";
+   };
+   new StaticShape() {
+      position = "-62.9142 138.586 116";
+      rotation = "0 0 1 45";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "-112 15 116";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "79.9142 172.586 115.977";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "-88.5 206.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "-73 65 115.2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "64.0607 -21.0607 116.328";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "66 31 115.375";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "78 -84 122.508";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "206.828 -84.1716 119.7";
+      rotation = "0 0 1 135";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "176 -146 119.8";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "138 -194.5 119.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "136.5 -81 119.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "119 -125.5 124.977";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new StaticShape() {
+      position = "100 -109 125.141";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new StaticShape() {
+      position = "110.5 -114.5 125.07";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new StaticShape() {
+      position = "70 -98 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new StaticShape() {
+      position = "50.5 -109 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new StaticShape() {
+      position = "83 -97.5 124.938";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new StaticShape() {
+      position = "34 -140.5 124.781";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new StaticShape() {
+      position = "41.5 -126 124.867";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new StaticShape() {
+      position = "47 -119 124.625";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new StaticShape() {
+      position = "49 -191 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new StaticShape() {
+      position = "86.5 -201 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new StaticShape() {
+      position = "73.5 -200.5 125";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new StaticShape() {
+      position = "103 -192 125.594";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008.dts";
+   };
+   new StaticShape() {
+      position = "111.5 -181 124.984";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new StaticShape() {
+      position = "123 -145 124.828";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill008a.dts";
+   };
+   new StaticShape() {
+      position = "215.5 -75.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "199 -79 116.281";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "156.5 -76 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "124 -71.5 116.024";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "107 -45 115.984";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "107.5 -26.5 116.484";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "78 -13.5 115.945";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "60.5 -34 116.062";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "49.5 -57.5 115.984";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "40.5 -63 115.984";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "21 -81 116.047";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-12 -89 116.078";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-44 -85 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-67 -77 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-96 -53.5 116.031";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-112 -27 115.984";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-112.5 5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-106 35.5 115.898";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-107 46.5 116.094";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-108.5 74.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-93 94.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-71 112.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-66.5 148 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-77 162 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-87 196 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-88.5 216 116.297";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-51 196.5 116.524";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-42.5 174 116.024";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-27.5 149.5 116.008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-20 137 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "2.5 125 116.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-60 81 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-75 59.5 115.797";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-77.5 34.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-86 7 115.219";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-87.5 -17 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-83 -26.5 115.984";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-69.5 -43 115.766";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-35 -56 116.047";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "0 -59 116.172";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "20 -46 116.437";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "31.5 -31.5 115.937";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "39.5 -20 115.602";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "38 3.5 115.977";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "35 47.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "27 74 115.969";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "5.5 98.5 115.25";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-21 99.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "23.5 135 115.75";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "28.5 155.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "37 176 116.062";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "43 189 115.969";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "68 201.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "79.5 202 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "105.5 208.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "139.5 200 115.969";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "162.5 193 116.008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "177.5 179.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "186.5 145.5 116.234";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "180 110 115.781";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "178.5 82.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "174.5 59 117";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "158 30.5 116.117";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "125.5 56 115.906";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "146 78.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "155 102 116.031";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "161 130.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "157.5 151 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "138.5 166.5 116.383";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "115.5 181.5 116.344";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "90 177.5 116.172";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "64.5 158.5 116.477";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "56 150 115.781";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "50 123.5 115.992";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "46.5 94.5 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "53 86 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "68 63 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "93 48 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant002b.dts";
+   };
+   new StaticShape() {
+      position = "153.5 -11.5 116.211";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "178.5 -27 116.313";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "213 -28 116";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/plant004.dts";
+   };
+   new StaticShape() {
+      position = "-129.5 96.5 120.094";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-119 111 120.047";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-146.5 96.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-161 96 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-146.5 124.5 119.969";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-161 123.5 120.016";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-179.5 96.5 119.977";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-184.5 111 119.992";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-170 177 119.828";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-139.5 176 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-172 147 119.391";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "-139 149.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/light008.dts";
+   };
+   new StaticShape() {
+      position = "11.5 124.5 116";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new StaticShape() {
+      position = "11.5 120 116.094";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new StaticShape() {
+      position = "11.5 115.5 114.422";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new StaticShape() {
+      position = "12 111.5 115";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new StaticShape() {
+      position = "12 103 115";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new StaticShape() {
+      position = "11.5 107 115";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new StaticShape() {
+      position = "12 94.5 115.469";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new StaticShape() {
+      position = "11.5 98.5 115.016";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/outside_object004.dts";
+   };
+   new StaticShape() {
+      position = "97.5 43 116";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill003b.dts";
+   };
+   new StaticShape() {
+      position = "88.5 -7.5 116";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/dragon_hill003b.dts";
+   };
+   new StaticShape() {
+      position = "119 -63.5 116.109";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "188.5 -23 116.039";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "135.5 69.5 116.031";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "169.5 189.5 116.117";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "21 85.5 115.977";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new StaticShape() {
+      position = "9.5 -85.5 115.969";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "DummyStaticShapeData";
+      shapeName = "~/data/shapes/buildings/garden_002b.dts";
+   };
+   new TSStatic() {
+      position = "-154 89.5 120";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/buildings/room_furniture014.dts";
+   };
+};
+//--- OBJECT WRITE END ---
