@@ -1,0 +1,2 @@
+*.dso binary diff=hex
+*.pno binary diff=hex
