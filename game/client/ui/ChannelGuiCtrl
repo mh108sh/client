@@ -1,0 +1,51 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(NewGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   visible = "1";
+   tooltipprofile = "GuiDefaultProfile";
+
+   new hpGuiWindow2Ctrl() {
+      profile = "GuiWindowProfile3";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "125 79";
+      extent = "70 58";
+      minExtent = "8 2";
+      visible = "1";
+      tooltipprofile = "GuiDefaultProfile";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      noTitle = "1";
+      snap = "1";
+      canDropIcon = "0";
+      resizeTopHeight = "0";
+
+      new GuiTextListCtrl(ChannelList) {
+         profile = "GuiTextListProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 9";
+         extent = "56 42";
+         minExtent = "8 2";
+         visible = "1";
+         tooltipprofile = "GuiDefaultProfile";
+         enumerate = "0";
+         resizeCell = "1";
+         columns = "0";
+         fitParentWidth = "0";
+         clipColumnText = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
